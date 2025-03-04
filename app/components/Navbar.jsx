@@ -28,9 +28,10 @@ export default function Navbar() {
 				<div className='flex items-center justify-between'>
 					{/* Logo */}
 					<Link href='/' className='flex items-center'>
-						<span className={`text-2xl font-bold transition-colors duration-300 ${
-							isScrolled ? 'text-green-800' : 'text-white'
-						}`}>
+						<span
+							className={`text-2xl font-bold transition-colors duration-300 ${
+								isScrolled ? 'text-green-800' : 'text-white'
+							}`}>
 							Village Legacy
 						</span>
 					</Link>
@@ -38,9 +39,13 @@ export default function Navbar() {
 					{/* Desktop Navigation */}
 					<nav className='hidden md:flex space-x-8'>
 						<NavLink href='/' label='Home' isScrolled={isScrolled} />
-						<NavLink href='/maintenance' label='Maintenance' isScrolled={isScrolled} />
-						<NavLink href='/landscape' label='Landscape' isScrolled={isScrolled} />
-						<NavLink href='/projects' label='Recent Projects' isScrolled={isScrolled} />
+
+						<NavLink href='/About' label='About' isScrolled={isScrolled} />
+						<NavLink
+							href='/projects'
+							label='Recent Projects'
+							isScrolled={isScrolled}
+						/>
 						<NavLink href='/reviews' label='Reviews' isScrolled={isScrolled} />
 						<NavLink
 							href='/contact'
