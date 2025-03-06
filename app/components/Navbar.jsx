@@ -17,6 +17,21 @@ export default function Navbar() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	const scrollToSection = (sectionId, isMobile = false) => {
+		const element = document.getElementById(sectionId);
+		if (element) {
+			window.scrollTo({
+				top: element.offsetTop - 100, // Offset to account for navbar height
+				behavior: 'smooth',
+			});
+		}
+
+		// Close mobile menu if it's a mobile click
+		if (isMobile) {
+			setIsMobileMenuOpen(false);
+		}
+	};
+
 	return (
 		<header
 			className={`fixed w-full z-50 transition-all duration-300 ${
@@ -38,20 +53,42 @@ export default function Navbar() {
 
 					{/* Desktop Navigation */}
 					<nav className='hidden md:flex space-x-8'>
-						<NavLink href='/' label='Home' isScrolled={isScrolled} />
-
-						<NavLink href='/About' label='About' isScrolled={isScrolled} />
 						<NavLink
-							href='/projects'
+							sectionId='hero'
+							label='Home'
+							isScrolled={isScrolled}
+							onClick={() => scrollToSection('hero')}
+						/>
+						<NavLink
+							sectionId='services'
+							label='Services'
+							isScrolled={isScrolled}
+							onClick={() => scrollToSection('services')}
+						/>
+						<NavLink
+							sectionId='about'
+							label='About'
+							isScrolled={isScrolled}
+							onClick={() => scrollToSection('about')}
+						/>
+						{/* <NavLink
+							sectionId='projects'
 							label='Recent Projects'
 							isScrolled={isScrolled}
-						/>
-						<NavLink href='/reviews' label='Reviews' isScrolled={isScrolled} />
+							onClick={() => scrollToSection('projects')}
+						/> */}
 						<NavLink
-							href='/contact'
+							sectionId='testimonials'
+							label='Reviews'
+							isScrolled={isScrolled}
+							onClick={() => scrollToSection('testimonials')}
+						/>
+						<NavLink
+							sectionId='contact'
 							label='Hire Us'
 							className='bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-colors'
 							isScrolled={isScrolled}
+							onClick={() => scrollToSection('contact')}
 						/>
 					</nav>
 
@@ -97,34 +134,34 @@ export default function Navbar() {
 				{isMobileMenuOpen && (
 					<nav className='md:hidden mt-4 pb-4 space-y-3 flex flex-col bg-white rounded-lg p-4 shadow-lg'>
 						<MobileNavLink
-							href='/'
+							sectionId='hero'
 							label='Home'
-							onClick={() => setIsMobileMenuOpen(false)}
+							onClick={() => scrollToSection('hero', true)}
 						/>
 						<MobileNavLink
-							href='/maintenance'
-							label='Maintenance'
-							onClick={() => setIsMobileMenuOpen(false)}
+							sectionId='services'
+							label='Services'
+							onClick={() => scrollToSection('services', true)}
 						/>
 						<MobileNavLink
-							href='/landscape'
-							label='Landscape'
-							onClick={() => setIsMobileMenuOpen(false)}
+							sectionId='about'
+							label='About'
+							onClick={() => scrollToSection('about', true)}
 						/>
 						<MobileNavLink
-							href='/projects'
+							sectionId='projects'
 							label='Recent Projects'
-							onClick={() => setIsMobileMenuOpen(false)}
+							onClick={() => scrollToSection('projects', true)}
 						/>
 						<MobileNavLink
-							href='/reviews'
+							sectionId='testimonials'
 							label='Reviews'
-							onClick={() => setIsMobileMenuOpen(false)}
+							onClick={() => scrollToSection('testimonials', true)}
 						/>
 						<MobileNavLink
-							href='/contact'
+							sectionId='contact'
 							label='Hire Us'
-							onClick={() => setIsMobileMenuOpen(false)}
+							onClick={() => scrollToSection('contact', true)}
 							className='bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-colors w-fit'
 						/>
 					</nav>
@@ -134,27 +171,26 @@ export default function Navbar() {
 	);
 }
 
-function NavLink({ href, label, className = '', isScrolled }) {
+function NavLink({ sectionId, label, className = '', isScrolled, onClick }) {
 	return (
-		<Link
-			href={href}
+		<button
+			onClick={onClick}
 			className={`font-medium transition-colors duration-300 ${
 				isScrolled
 					? 'text-gray-800 hover:text-green-700'
 					: 'text-white hover:text-green-500'
 			} ${className}`}>
 			{label}
-		</Link>
+		</button>
 	);
 }
 
-function MobileNavLink({ href, label, onClick, className = '' }) {
+function MobileNavLink({ sectionId, label, onClick, className = '' }) {
 	return (
-		<Link
-			href={href}
-			className={`text-gray-800 hover:text-green-700 font-medium transition-colors ${className}`}
-			onClick={onClick}>
+		<button
+			onClick={onClick}
+			className={`text-gray-800 hover:text-green-700 font-medium transition-colors ${className}`}>
 			{label}
-		</Link>
+		</button>
 	);
 }

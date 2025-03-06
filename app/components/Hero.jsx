@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 export default function Hero() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -10,8 +9,18 @@ export default function Hero() {
 		setIsVisible(true);
 	}, []);
 
+	const scrollToSection = (sectionId) => {
+		const element = document.getElementById(sectionId);
+		if (element) {
+			window.scrollTo({
+				top: element.offsetTop - 100,
+				behavior: 'smooth',
+			});
+		}
+	};
+
 	return (
-		<section className='relative h-screen flex items-center'>
+		<section className='relative h-screen flex items-center' id='hero'>
 			{/* Background Image with Overlay */}
 			<div
 				className='absolute inset-0 bg-cover bg-center z-0'
@@ -36,16 +45,16 @@ export default function Hero() {
 						exceptional landscaping services since 2024.
 					</p>
 					<div className='flex flex-col sm:flex-row gap-4'>
-						<Link
-							href='/contact'
+						<button
+							onClick={() => scrollToSection('contact')}
 							className='bg-green-600 hover:bg-green-700 text-white font-medium px-8 py-3 rounded-full transition-colors text-center'>
 							Schedule a Free Appointment
-						</Link>
-						<Link
-							href='/projects'
+						</button>
+						<button
+							onClick={() => scrollToSection('services')}
 							className='bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium px-8 py-3 rounded-full transition-colors border border-white/30 text-center'>
-							View Our Work
-						</Link>
+							View Our Services
+						</button>
 					</div>
 				</div>
 			</div>

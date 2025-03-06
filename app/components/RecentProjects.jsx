@@ -37,7 +37,7 @@ export default function RecentProjects() {
 	const [activeProject, setActiveProject] = useState(projects[0]);
 
 	return (
-		<section className='py-20 bg-white' id='recent-projects'>
+		<section className='py-20 bg-white' id='projects'>
 			<div className='container mx-auto px-4 md:px-6'>
 				<div className='text-center mb-12'>
 					<h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
