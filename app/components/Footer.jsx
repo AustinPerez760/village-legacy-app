@@ -27,10 +27,8 @@ export default function Footer() {
 							since 2010.
 						</p>
 						<div className='flex space-x-4'>
-							<SocialLink href='https://facebook.com' icon='facebook' />
 							<SocialLink href='https://instagram.com' icon='instagram' />
 							<SocialLink href='https://twitter.com' icon='twitter' />
-							<SocialLink href='https://linkedin.com' icon='linkedin' />
 						</div>
 					</div>
 
@@ -38,12 +36,36 @@ export default function Footer() {
 					<div>
 						<h3 className='text-xl font-bold mb-4'>Quick Links</h3>
 						<ul className='space-y-2'>
-							<FooterLink sectionId='hero' label='Home' onClick={() => scrollToSection('hero')} />
-							<FooterLink sectionId='about' label='About Us' onClick={() => scrollToSection('about')} />
-							<FooterLink sectionId='services' label='Services' onClick={() => scrollToSection('services')} />
-							<FooterLink sectionId='projects' label='Recent Projects' onClick={() => scrollToSection('projects')} />
-							<FooterLink sectionId='testimonials' label='Reviews' onClick={() => scrollToSection('testimonials')} />
-							<FooterLink sectionId='contact' label='Contact Us' onClick={() => scrollToSection('contact')} />
+							<FooterLink
+								sectionId='hero'
+								label='Home'
+								onClick={() => scrollToSection('hero')}
+							/>
+							<FooterLink
+								sectionId='about'
+								label='About Us'
+								onClick={() => scrollToSection('about')}
+							/>
+							<FooterLink
+								sectionId='services'
+								label='Services'
+								onClick={() => scrollToSection('services')}
+							/>
+							<FooterLink
+								sectionId='projects'
+								label='Recent Projects'
+								onClick={() => scrollToSection('projects')}
+							/>
+							<FooterLink
+								sectionId='testimonials'
+								label='Reviews'
+								onClick={() => scrollToSection('testimonials')}
+							/>
+							<FooterLink
+								sectionId='contact'
+								label='Contact Us'
+								onClick={() => scrollToSection('contact')}
+							/>
 						</ul>
 					</div>
 
@@ -56,29 +78,29 @@ export default function Footer() {
 								label='Garden Maintenance'
 								onClick={() => scrollToSection('services')}
 							/>
-							<FooterLink 
-								sectionId='services' 
-								label='Landscape Design' 
+							<FooterLink
+								sectionId='services'
+								label='Landscape Design'
 								onClick={() => scrollToSection('services')}
 							/>
 							<FooterLink
 								sectionId='services'
-								label='Landscape Installation'
+								label='Demolition'
 								onClick={() => scrollToSection('services')}
 							/>
 							<FooterLink
 								sectionId='services'
-								label='Irrigation Systems'
+								label='Junk Removal'
 								onClick={() => scrollToSection('services')}
 							/>
-							<FooterLink 
-								sectionId='services' 
-								label='Hardscaping' 
+							<FooterLink
+								sectionId='services'
+								label='Stonework'
 								onClick={() => scrollToSection('services')}
 							/>
-							<FooterLink 
-								sectionId='services' 
-								label='Consultation' 
+							<FooterLink
+								sectionId='services'
+								label='Consultation'
 								onClick={() => scrollToSection('services')}
 							/>
 						</ul>
@@ -175,7 +197,8 @@ export default function Footer() {
 				{/* Bottom Bar */}
 				<div className='pt-8 border-t border-gray-800 text-center md:flex md:justify-between md:items-center'>
 					<p className='text-gray-500 mb-4 md:mb-0'>
-						&copy; {currentYear} Village Legacy Landscaping. All rights reserved.
+						&copy; {currentYear} Village Legacy Landscaping. All rights
+						reserved.
 					</p>
 					<div className='flex flex-wrap justify-center md:justify-end gap-4 text-sm text-gray-500'>
 						<Link

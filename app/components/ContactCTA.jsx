@@ -167,7 +167,9 @@ export default function ContactCTA() {
 						) : (
 							<>
 								<h3 className='text-2xl font-bold mb-6'>Get in Touch</h3>
-								<form onSubmit={handleSubmit}>
+								<form
+									action='https://formsubmit.co/your@email.com'
+									method='POST'>
 									<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
 										<div>
 											<label
@@ -231,13 +233,12 @@ export default function ContactCTA() {
 											value={formData.service}
 											onChange={handleChange}
 											className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors'>
+											<option value='consultation'>Consultation</option>
 											<option value='general'>General Inquiry</option>
 											<option value='maintenance'>Landscape Maintenance</option>
 											<option value='design'>Landscape Design</option>
-											<option value='installation'>
-												Landscape Installation
-											</option>
-											<option value='consultation'>Consultation</option>
+											<option value='junk-removal'>Junk Removal</option>
+											<option value='demolition'>Demolition</option>
 										</select>
 									</div>
 
