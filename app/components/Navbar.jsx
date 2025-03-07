@@ -47,7 +47,7 @@ export default function Navbar() {
 							className={`text-2xl font-bold transition-colors duration-300 ${
 								isScrolled ? 'text-green-800' : 'text-white'
 							}`}>
-							Village Legacy
+							The Village Legacy
 						</span>
 					</Link>
 

@@ -41,7 +41,7 @@ export default function Hero() {
 						Transform Your Outdoor Space
 					</h1>
 					<p className='text-xl md:text-2xl text-white/90 mb-8'>
-						Village Legacy Landscaping has been serving local residents with
+						The Village Legacy Landscaping has been serving local residents with
 						exceptional landscaping services since 2024.
 					</p>
 					<div className='flex flex-col sm:flex-row gap-4'>

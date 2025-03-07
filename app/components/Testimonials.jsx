@@ -23,7 +23,7 @@ const testimonials = [
 		name: 'Emily Rodriguez',
 		role: 'Homeowner',
 		content:
-			'The team at Village Legacy has been maintaining our garden for over 2 years now. They are reliable, thorough, and truly care about the health and appearance of our outdoor space. Highly recommended!',
+			'The team at Village Legacy has been maintaining our garden for over a year now. They are reliable, thorough, and truly care about the health and appearance of our outdoor space. Highly recommended!',
 	},
 ];
 

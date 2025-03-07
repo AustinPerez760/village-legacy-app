@@ -101,7 +101,9 @@ export default function ContactCTA() {
 								</div>
 								<div>
 									<h3 className='font-medium text-xl mb-1'>Email Us</h3>
-									<p className='text-green-100'>info@villagelegacy.com</p>
+									<p className='text-green-100'>
+										villagelegacylandscaping@gmail.com
+									</p>
 								</div>
 							</div>
 

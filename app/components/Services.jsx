@@ -183,7 +183,7 @@ export default function Services() {
 							<ServiceCard
 								title='Demolition'
 								description='We provide safe and efficient demolition services for your outdoor projects.'
-								imageSrc='/images/demolition.jpg'
+								imageSrc='/images/demo.jpg'
 								targetSection='contact'
 								onClick={() => scrollToSection('contact')}
 								delay={600}
@@ -193,7 +193,7 @@ export default function Services() {
 							<ServiceCard
 								title='Junk Removal'
 								description='We offer reliable junk removal services to help you declutter your outdoor space.'
-								imageSrc='/images/junk-removal.jpg'
+								imageSrc='/images/removal.jpg'
 								targetSection='contact'
 								onClick={() => scrollToSection('contact')}
 								delay={800}

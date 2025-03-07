@@ -21,14 +21,13 @@ export default function Footer() {
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>
 					{/* Company Info */}
 					<div>
-						<h3 className='text-xl font-bold mb-4'>Village Legacy</h3>
+						<h3 className='text-xl font-bold mb-4'>The Village Legacy</h3>
 						<p className='text-gray-400 mb-4'>
 							Transforming outdoor spaces with exceptional landscaping services
-							since 2010.
+							since 2024.
 						</p>
 						<div className='flex space-x-4'>
 							<SocialLink href='https://instagram.com' icon='instagram' />
-							<SocialLink href='https://twitter.com' icon='twitter' />
 						</div>
 					</div>
 
@@ -197,7 +196,7 @@ export default function Footer() {
 				{/* Bottom Bar */}
 				<div className='pt-8 border-t border-gray-800 text-center md:flex md:justify-between md:items-center'>
 					<p className='text-gray-500 mb-4 md:mb-0'>
-						&copy; {currentYear} Village Legacy Landscaping. All rights
+						&copy; {currentYear} The Village Legacy Landscaping. All rights
 						reserved.
 					</p>
 					<div className='flex flex-wrap justify-center md:justify-end gap-4 text-sm text-gray-500'>
@@ -251,7 +250,7 @@ function SocialLink({ href, icon }) {
 					<path d='M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z' />
 				</svg>
 			)}
-			{icon === 'twitter' && (
+			{icon === 'yelp' && (
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
 					width='20'
