@@ -168,7 +168,7 @@ export default function ContactCTA() {
 							<>
 								<h3 className='text-2xl font-bold mb-6'>Get in Touch</h3>
 								<form
-									action='https://formsubmit.co/villagelegecylandscaping@gmail.com'
+									action='https://formsubmit.co/villagelegacylandscaping@gmail.com'
 									method='POST'>
 									<div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
 										<div>
