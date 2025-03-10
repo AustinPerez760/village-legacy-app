@@ -140,7 +140,7 @@ export default function QuoteSystem() {
 	const renderStep1 = () => {
 		return (
 			<div className='text-center text-gray-800'>
-				<h2 className='text-2xl font-bold mb-6'>
+				<h2 className='text-2xl font-bold mb-6 text-gray-800'>
 					How would you describe your lawn?
 				</h2>
 				<div className='grid gap-4 md:grid-cols-3'>
@@ -148,7 +148,7 @@ export default function QuoteSystem() {
 						<button
 							key={condition.id}
 							onClick={() => handleLawnConditionSelect(condition.id)}
-							className='p-4 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors'>
+							className='p-4 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors text-gray-800'>
 							{condition.label}
 						</button>
 					))}
@@ -159,8 +159,8 @@ export default function QuoteSystem() {
 
 	const renderStep2 = () => {
 		return (
-			<div>
-				<h2 className='text-2xl font-bold mb-6 text-center'>
+			<div className='text-gray-800'>
+				<h2 className='text-2xl font-bold mb-6 text-center text-gray-800'>
 					What is your yard's biggest problem?
 				</h2>
 				<p className='text-gray-800 mb-4 text-center'>Select all that apply</p>
@@ -169,7 +169,7 @@ export default function QuoteSystem() {
 						<div
 							key={problem.id}
 							onClick={() => handleProblemToggle(problem.id)}
-							className={`p-4 border-2 rounded-lg cursor-pointer transition-colors ${
+							className={`p-4 border-2 rounded-lg cursor-pointer transition-colors text-gray-800 ${
 								formData.lawnProblems.includes(problem.id)
 									? 'border-green-600 bg-green-50'
 									: 'border-gray-300 hover:border-green-400'
@@ -183,7 +183,7 @@ export default function QuoteSystem() {
 									}`}>
 									{formData.lawnProblems.includes(problem.id) && '✓'}
 								</div>
-								<span>{problem.label}</span>
+								<span className='text-gray-800'>{problem.label}</span>
 							</div>
 						</div>
 					))}
@@ -191,7 +191,7 @@ export default function QuoteSystem() {
 				<div className='flex justify-between'>
 					<button
 						onClick={handlePrevStep}
-						className='px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors'>
+						className='px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors text-gray-800'>
 						Back
 					</button>
 					<button
@@ -207,11 +207,11 @@ export default function QuoteSystem() {
 
 	const renderStep3 = () => {
 		return (
-			<div>
-				<h2 className='text-2xl font-bold mb-6 text-center'>
+			<div className='text-gray-800'>
+				<h2 className='text-2xl font-bold mb-6 text-center text-gray-800'>
 					Ready to love your lawn?
 				</h2>
-				<p className='text-gray-600 mb-6 text-center'>
+				<p className='text-gray-800 mb-6 text-center'>
 					Fill in your details to see the right plan for you and start living
 					life outside.
 				</p>
@@ -219,7 +219,7 @@ export default function QuoteSystem() {
 					<div>
 						<label
 							htmlFor='name'
-							className='block text-sm font-medium text-gray-700 mb-1'>
+							className='block text-sm font-medium text-gray-800 mb-1'>
 							Full Name
 						</label>
 						<input
@@ -228,7 +228,7 @@ export default function QuoteSystem() {
 							name='name'
 							value={formData.name}
 							onChange={handleInputChange}
-							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent'
+							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800'
 							placeholder='Your name'
 							required
 						/>
@@ -236,7 +236,7 @@ export default function QuoteSystem() {
 					<div>
 						<label
 							htmlFor='email'
-							className='block text-sm font-medium text-gray-700 mb-1'>
+							className='block text-sm font-medium text-gray-800 mb-1'>
 							Email
 						</label>
 						<input
@@ -245,7 +245,7 @@ export default function QuoteSystem() {
 							name='email'
 							value={formData.email}
 							onChange={handleInputChange}
-							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent'
+							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800'
 							placeholder='Your email'
 							required
 						/>
@@ -253,7 +253,7 @@ export default function QuoteSystem() {
 					<div>
 						<label
 							htmlFor='phone'
-							className='block text-sm font-medium text-gray-700 mb-1'>
+							className='block text-sm font-medium text-gray-800 mb-1'>
 							Phone
 						</label>
 						<input
@@ -262,7 +262,7 @@ export default function QuoteSystem() {
 							name='phone'
 							value={formData.phone}
 							onChange={handleInputChange}
-							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent'
+							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800'
 							placeholder='Your phone number'
 							required
 						/>
@@ -270,7 +270,7 @@ export default function QuoteSystem() {
 					<div>
 						<label
 							htmlFor='address'
-							className='block text-sm font-medium text-gray-700 mb-1'>
+							className='block text-sm font-medium text-gray-800 mb-1'>
 							Address
 						</label>
 						<input
@@ -279,13 +279,13 @@ export default function QuoteSystem() {
 							name='address'
 							value={formData.address}
 							onChange={handleInputChange}
-							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent'
+							className='w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-800'
 							placeholder='Your address'
 							required
 						/>
 					</div>
 				</div>
-				<div className='text-xs text-gray-500 mb-6'>
+				<div className='text-xs text-gray-800 mb-6'>
 					By continuing, you agree to our{' '}
 					<a href='#' className='text-green-600 underline'>
 						Privacy Policy
@@ -299,7 +299,7 @@ export default function QuoteSystem() {
 				<div className='flex justify-between'>
 					<button
 						onClick={handlePrevStep}
-						className='px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors'>
+						className='px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors text-gray-800'>
 						Back
 					</button>
 					<button
@@ -322,12 +322,14 @@ export default function QuoteSystem() {
 		if (!quoteResult) return null;
 
 		return (
-			<div>
+			<div className='text-gray-800'>
 				<div className='text-center mb-8'>
 					<h2 className='text-3xl font-bold text-green-600 mb-2'>
 						Your Customized Lawn Plan
 					</h2>
-					<p className='text-xl'>Thank you for choosing Village Legacy!</p>
+					<p className='text-xl text-gray-800'>
+						Thank you for choosing Village Legacy!
+					</p>
 					<div className='mt-4 inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold'>
 						50% OFF Your First Service!
 					</div>
@@ -339,45 +341,51 @@ export default function QuoteSystem() {
 					</div>
 					<div className='p-6 space-y-4'>
 						<div>
-							<h4 className='font-medium text-gray-700'>
+							<h4 className='font-medium text-gray-800'>
 								Customer Information
 							</h4>
-							<p>{quoteResult.customerName}</p>
-							<p>{quoteResult.customerEmail}</p>
-							<p>{quoteResult.customerPhone}</p>
-							<p>{quoteResult.customerAddress}</p>
+							<p className='text-gray-800'>{quoteResult.customerName}</p>
+							<p className='text-gray-800'>{quoteResult.customerEmail}</p>
+							<p className='text-gray-800'>{quoteResult.customerPhone}</p>
+							<p className='text-gray-800'>{quoteResult.customerAddress}</p>
 						</div>
 
 						<div className='border-t border-gray-200 pt-4'>
-							<h4 className='font-medium text-gray-700'>Lawn Assessment</h4>
-							<p>Current Condition: {quoteResult.lawnCondition}</p>
+							<h4 className='font-medium text-gray-800'>Lawn Assessment</h4>
+							<p className='text-gray-800'>
+								Current Condition: {quoteResult.lawnCondition}
+							</p>
 							<div>
-								<p className='font-medium mt-2'>Issues to Address:</p>
+								<p className='font-medium mt-2 text-gray-800'>
+									Issues to Address:
+								</p>
 								{quoteResult.selectedProblems.length > 0 ? (
-									<ul className='list-disc pl-5'>
+									<ul className='list-disc pl-5 text-gray-800'>
 										{quoteResult.selectedProblems.map((problem, index) => (
-											<li key={index}>{problem}</li>
+											<li key={index} className='text-gray-800'>
+												{problem}
+											</li>
 										))}
 									</ul>
 								) : (
-									<p>No specific issues selected</p>
+									<p className='text-gray-800'>No specific issues selected</p>
 								)}
 							</div>
 						</div>
 
 						<div className='border-t border-gray-200 pt-4'>
-							<h4 className='font-medium text-gray-700'>Pricing</h4>
+							<h4 className='font-medium text-gray-800'>Pricing</h4>
 							<div className='flex justify-between mt-2'>
-								<span>Regular Price:</span>
-								<span>${quoteResult.totalPrice}</span>
+								<span className='text-gray-800'>Regular Price:</span>
+								<span className='text-gray-800'>${quoteResult.totalPrice}</span>
 							</div>
 							<div className='flex justify-between text-green-600 font-medium'>
 								<span>First Service Discount (50%):</span>
 								<span>-${quoteResult.discount}</span>
 							</div>
 							<div className='flex justify-between font-bold text-lg mt-2 pt-2 border-t border-gray-200'>
-								<span>Your Price:</span>
-								<span>${quoteResult.finalPrice}</span>
+								<span className='text-gray-800'>Your Price:</span>
+								<span className='text-gray-800'>${quoteResult.finalPrice}</span>
 							</div>
 						</div>
 					</div>
@@ -427,10 +435,10 @@ export default function QuoteSystem() {
 		<section id='quote' className='py-16 bg-gray-50'>
 			<div className='container mx-auto px-4 max-w-4xl'>
 				<div className='text-center mb-10'>
-					<h1 className='text-4xl font-bold text-gray-900'>
+					<h1 className='text-4xl font-bold text-gray-800'>
 						Get Your Instant Quote
 					</h1>
-					<p className='mt-4 text-xl text-gray-600'>
+					<p className='mt-4 text-xl text-gray-800'>
 						Sign up Today and Get 50% Off Your First Service
 					</p>
 				</div>
@@ -441,33 +449,33 @@ export default function QuoteSystem() {
 				</div>
 
 				<div className='mt-12'>
-					<h3 className='text-2xl font-bold text-center mb-6'>
+					<h3 className='text-2xl font-bold text-center mb-6 text-gray-800'>
 						What your neighbors say
 					</h3>
 					<div className='grid md:grid-cols-3 gap-6'>
 						<div className='bg-white p-6 rounded-lg shadow'>
 							<div className='text-green-600 text-4xl mb-2'>"</div>
-							<p className='italic mb-4'>
+							<p className='italic mb-4 text-gray-800'>
 								My lawn is much greener and more lush than before. I love how
 								they leave feedback and tips on how to improve my lawn!
 							</p>
-							<p className='font-bold'>- Justin P.</p>
+							<p className='font-bold text-gray-800'>- Justin P.</p>
 						</div>
 						<div className='bg-white p-6 rounded-lg shadow'>
 							<div className='text-green-600 text-4xl mb-2'>"</div>
-							<p className='italic mb-4'>
+							<p className='italic mb-4 text-gray-800'>
 								My grass looks great since we did the aeration and seeding! I
 								gave your number to my neighbor.
 							</p>
-							<p className='font-bold'>- Leslie L.</p>
+							<p className='font-bold text-gray-800'>- Leslie L.</p>
 						</div>
 						<div className='bg-white p-6 rounded-lg shadow'>
 							<div className='text-green-600 text-4xl mb-2'>"</div>
-							<p className='italic mb-4'>
+							<p className='italic mb-4 text-gray-800'>
 								The curbside appeal of my home has dramatically improved which
 								increases the value of my home, should I ever consider selling.
 							</p>
-							<p className='font-bold'>- Glen M.</p>
+							<p className='font-bold text-gray-800'>- Glen M.</p>
 						</div>
 					</div>
 				</div>
