@@ -47,12 +47,12 @@ export default function Hero() {
 					<div className='flex flex-col sm:flex-row gap-4'>
 						<button
 							onClick={() => scrollToSection('contact')}
-							className='bg-green-600 hover:bg-green-700 text-white font-medium px-8 py-3 rounded-full transition-colors text-center'>
+							className='bg-green-600 hover:bg-green-700 text-white font-medium px-8 py-3 rounded-full transition-colors text-center cursor-pointer'>
 							Schedule a Free Appointment
 						</button>
 						<button
 							onClick={() => scrollToSection('services')}
-							className='bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium px-8 py-3 rounded-full transition-colors border border-white/30 text-center'>
+							className='bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium px-8 py-3 rounded-full transition-colors border border-white/30 text-center cursor-pointer'>
 							View Our Services
 						</button>
 					</div>

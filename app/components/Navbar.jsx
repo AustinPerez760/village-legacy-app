@@ -49,27 +49,39 @@ export default function Navbar() {
 							}`}>
 							The Village Legacy
 						</span>
+						{isScrolled && (
+							<Image 
+								src='/images/vl-logo.jpg'
+								alt='Village Legacy Logo'
+								width={70}
+								height={70}
+								className='ml-2 rounded-full transition-opacity duration-300 opacity-100'
+							/>
+						)}
 					</Link>
 
 					{/* Desktop Navigation */}
-					<nav className='hidden md:flex space-x-8'>
+					<nav className='hidden md:flex space-x-8 '>
 						<NavLink
 							sectionId='hero'
 							label='Home'
 							isScrolled={isScrolled}
 							onClick={() => scrollToSection('hero')}
+							className='cursor-pointer'
 						/>
 						<NavLink
 							sectionId='services'
 							label='Services'
 							isScrolled={isScrolled}
 							onClick={() => scrollToSection('services')}
+							className='cursor-pointer'
 						/>
 						<NavLink
 							sectionId='about'
 							label='About'
 							isScrolled={isScrolled}
 							onClick={() => scrollToSection('about')}
+							className='cursor-pointer'
 						/>
 						{/* <NavLink
 							sectionId='projects'
@@ -82,11 +94,12 @@ export default function Navbar() {
 							label='Reviews'
 							isScrolled={isScrolled}
 							onClick={() => scrollToSection('testimonials')}
+							className='cursor-pointer'
 						/>
 						<NavLink
 							sectionId='contact'
 							label='Hire Us'
-							className='bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-colors'
+							className='bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-colors cursor-pointer'
 							isScrolled={isScrolled}
 							onClick={() => scrollToSection('contact')}
 						/>
