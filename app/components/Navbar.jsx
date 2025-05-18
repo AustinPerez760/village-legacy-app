@@ -43,21 +43,15 @@ export default function Navbar() {
 				<div className='flex items-center justify-between'>
 					{/* Logo */}
 					<Link href='/' className='flex items-center'>
-						<span
-							className={`text-2xl font-bold transition-colors duration-300 ${
-								isScrolled ? 'text-green-800' : 'text-white'
-							}`}>
-							The Village Legacy
-						</span>
-						{isScrolled && (
-							<Image 
-								src='/images/vl-logo.jpg'
-								alt='Village Legacy Logo'
-								width={70}
-								height={70}
-								className='ml-2 rounded-full transition-opacity duration-300 opacity-100'
-							/>
-						)}
+						<Image
+							src='/images/vl-logo.jpg'
+							alt='Village Legacy Logo'
+							width={90}
+							height={90}
+							className={`rounded-full transition-all duration-300 ${
+								isScrolled ? 'scale-100' : 'scale-130'
+							}`}
+						/>
 					</Link>
 
 					{/* Desktop Navigation */}

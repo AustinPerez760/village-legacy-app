@@ -11,7 +11,7 @@ export default function About() {
 					<div className='relative'>
 						<div className='relative h-[500px] w-full rounded-xl overflow-hidden shadow-lg'>
 							<Image
-								src='/images/panel-lawns.jpg'
+								src='/images/aerialGarden.jpg'
 								alt='Village Legacy team'
 								fill
 								className='object-cover'

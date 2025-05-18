@@ -34,7 +34,7 @@ export default function Footer() {
 					{/* Quick Links */}
 					<div>
 						<h3 className='text-xl font-bold mb-4'>Quick Links</h3>
-						<ul className='space-y-2'>
+						<ul className='space-y-2 cursor-pointer'>
 							<FooterLink
 								sectionId='hero'
 								label='Home'
@@ -50,11 +50,11 @@ export default function Footer() {
 								label='Services'
 								onClick={() => scrollToSection('services')}
 							/>
-							<FooterLink
+							{/* <FooterLink
 								sectionId='projects'
 								label='Recent Projects'
 								onClick={() => scrollToSection('projects')}
-							/>
+							/> */}
 							<FooterLink
 								sectionId='testimonials'
 								label='Reviews'
@@ -202,15 +202,15 @@ export default function Footer() {
 					<div className='flex flex-wrap justify-center md:justify-end gap-4 text-sm text-gray-500'>
 						<Link
 							href='/privacy'
-							className='hover:text-white transition-colors'>
+							className='hover:text-white transition-colors cursor-pointer'>
 							Privacy Policy
 						</Link>
-						<Link href='/terms' className='hover:text-white transition-colors'>
+						<Link href='/terms' className='hover:text-white transition-colors cursor-pointer'>
 							Terms of Service
 						</Link>
 						<Link
 							href='/sitemap'
-							className='hover:text-white transition-colors'>
+							className='hover:text-white transition-colors cursor-pointer'>
 							Sitemap
 						</Link>
 					</div>
@@ -225,7 +225,7 @@ function FooterLink({ sectionId, label, onClick }) {
 		<li>
 			<button
 				onClick={onClick}
-				className='text-gray-400 hover:text-white transition-colors text-left'>
+				className='text-gray-400 hover:text-white transition-colors text-left cursor-pointer'>
 				{label}
 			</button>
 		</li>
@@ -238,7 +238,7 @@ function SocialLink({ href, icon }) {
 			href={href}
 			target='_blank'
 			rel='noopener noreferrer'
-			className='bg-gray-800 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors'
+			className='bg-gray-800 hover:bg-green-600 w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer'
 			aria-label={`Follow us on ${icon}`}>
 			{icon === 'facebook' && (
 				<svg
